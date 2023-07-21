@@ -14,8 +14,8 @@ The tilings are based on rings of complex integers.
 
 In particular:
 
-* Gaussian integers: $ Z[i] = { x = a + ib \in C | a, b \in Z, i^2 = -1 } $
-* Eisenstein integers $ Z[\omega] = { x = a + \omega b \in C | a, b \in Z, \omega = (1- i\sqrt(3))/2) } $
+* Gaussian integers: $ Z[i] = \{ x = a + ib \in C | a, b \in Z, i^2 = -1 \} $
+* Eisenstein integers $ Z[\omega] = \{ x = a + \omega b \in C | a, b \in Z, \omega = (1- i\sqrt(3))/2) \} $
 
 There is a package implementing Gaussian integers using AbstratctAlgebra.jl https://github.com/ulthiel/GaussianIntegers.jl 
 

@@ -12,7 +12,7 @@ function gaussian_prime(x::Int, y::Int)
 end
 
 function get_gaussian_primes(x_range, y_range)
-    z = zeros(length(x_range), length(y_range))
+    z = zeros(length(y_range), length(x_range))
     j = 0
     i = 0
     for x in x_range

@@ -49,6 +49,20 @@ plot_gaussian_primes(100; invert_colors = true)
 
 ![Gaussian Primes, invert_colors](imgs/gauss_primes_100_inv.png)
 
+
+The function can also take (non-symmetric) ranges:
+
+```
+plot_gaussian_primes(10)
+plot_gaussian_primes(0:10, 0:10)
+
+```
+
+![Gaussian primes symmetric](imgs/gauss_primes_10.png)
+
+![Gaussian primes non-symmetric](imgs/gauss_primes_0-10.png)
+
+
 ## Quadratic residues
 
 

@@ -12,10 +12,10 @@ Here's an example of what it can do:
 using Plots
 using ThieleTiles
 
-plot_gaussian_primes(100; invert_colors = true)
+plot_gaussian_primes(15); invert_colors = true)
 
 ```
 
-![Gaussian Primes, invert_colors](docs/src/imgs/gauss_primes_100_inv.png)
+![Gaussian Primes, invert_colors](docs/src/imgs/gauss_primes_15_inv.png)
 
 See more the the docs.

@@ -2,7 +2,7 @@
 CurrentModule = ThieleTiles
 ```
 
-# ThieleTiles
+# ThieleTiles.jl
 
 Documentation for [ThieleTiles](https://github.com/tp2750/ThieleTiles.jl).
 
@@ -65,6 +65,39 @@ plot_gaussian_primes(0:10, 0:10)
 
 ## Quadratic residues
 
+For an odd prime integer $p \in Z$, we can compute a lot of z^2 and check which Gaussian integers with real and imaginary part 0:p we hit.
+
+It is enough to check all a + ib, where a \in -p:p and b \in -p:p.
+
+This is enough to compute the pattern in the Hafinia building, which is based on p = 71
+
+![Quadratic residues modulo 71](imgs/quad_res_71-inv.png)
+
+The primes below 100 look as follows (note all the kw arguments, black is a quadratic residue):
+
+```
+julia> plot([plot_quadratic_residues(x; invert_colors = true, compact_title=true, simple=true) for x in primes(100)]..., size = (1200,1200))
+
+```
+![Quadratic residue modulus primes below 100](imgs/below100.png)
+
+The simpler ones get more interested if repeated. 
+Here we repeat them all 3 times in each direction:
+
+```
+julia> plot([plot_quadratic_residues(x; invert_colors = true, compact_title=true, repeat=3, simple=true) for x in primes(100)]..., size = (1200,1200))
+```
+
+![Quadratic residue modulus primes below 100 repeated 3 times each.](imgs/below100-3.png)
+
+
+
+It should also be possible to do something based on the [Euler criterion](https://en.wikipedia.org/wiki/Euler%27s_criterion), which (for integers) says:
+
+x^2 = a mod p iff  a^((p-1)/2) = 1 mod p
+
+However, I have not been able to generalize this.
+See here for hints: https://en.wikipedia.org/wiki/Quadratic_reciprocity#Gaussian_integers
 
 ```@index
 ```

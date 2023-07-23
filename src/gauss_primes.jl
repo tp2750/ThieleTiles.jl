@@ -1,7 +1,7 @@
 using Plots
 using Primes
 
-function gaussian_prime(x::Int, y::Int)
+function is_gaussian_prime(x::Int, y::Int)
     if x == 0
         return (abs(y) % 4) == 3 && isprime(abs(y))
     elseif y == 0
@@ -10,6 +10,8 @@ function gaussian_prime(x::Int, y::Int)
         return isprime(x^2 + y^2)
     end
 end
+
+is_gaussian_prime(z::Complex{Int}) = is_gaussian_prime(real(z), imag(z))
 
 function get_gaussian_primes(x_range, y_range)
     z = zeros(length(y_range), length(x_range))
@@ -20,8 +22,8 @@ function get_gaussian_primes(x_range, y_range)
         i = 0
         for y in y_range
             i = i+1
-            @debug "($i, $j) = $(gaussian_prime(x,y))"
-            z[i,j] = Int(gaussian_prime(x,y))
+            @debug "($i, $j) = $(is_gaussian_prime(x,y))"
+            z[i,j] = Int(is_gaussian_prime(x,y))
         end
     end
     z
@@ -32,7 +34,7 @@ function plot_gaussian_primes(x_range, y_range; invert_colors=false)
     if invert_colors
         z = 1 .- z
     end
-    heatmap(x_range, y_range, z; aspect_ratio = :equal)
+    heatmap(x_range, y_range, z; aspect_ratio = :equal, title="Gaussian primes")
 end
 
 function plot_gaussian_primes(range; invert_colors=false)

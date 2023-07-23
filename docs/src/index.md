@@ -6,7 +6,7 @@ CurrentModule = ThieleTiles
 
 Documentation for [ThieleTiles](https://github.com/tp2750/ThieleTiles.jl).
 
-This package is inspired by this paper by Steffen L. Lauritzen: http://web.math.ku.dk/~lauritzen/papers/ThieleOgGulvfliser.pdf (in Danish) abut the floow tiles designed by Thorvald Nicolai Thiele (1838-1910).
+This package is inspired by this paper by Steffen L. Lauritzen: <http://web.math.ku.dk/~lauritzen/papers/ThieleOgGulvfliser.pdf< (in Danish) abut the floor tiles designed by Thorvald Nicolai Thiele (1838-1910).
 
 # Background
 
